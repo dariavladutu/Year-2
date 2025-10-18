@@ -1,0 +1,17 @@
+{"time":"2025-08-17T20:05:05.5774239+03:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-17T20:05:05.9161182+03:00","level":"INFO","msg":"stream: created new stream","id":"rwrymtlp"}
+{"time":"2025-08-17T20:05:05.9161182+03:00","level":"INFO","msg":"stream: started","id":"rwrymtlp"}
+{"time":"2025-08-17T20:05:05.9166366+03:00","level":"INFO","msg":"writer: started","stream_id":"rwrymtlp"}
+{"time":"2025-08-17T20:05:05.9166366+03:00","level":"INFO","msg":"handler: started","stream_id":"rwrymtlp"}
+{"time":"2025-08-17T20:05:05.9166366+03:00","level":"INFO","msg":"sender: started","stream_id":"rwrymtlp"}
+{"time":"2025-08-17T20:05:06.2359555+03:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-08-17T20:05:17.1793763+03:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-08-17T20:05:17.1793763+03:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\dari\\\\Documents\\\\GitHub\\\\2024-25b-fai2-adsai-dariavladutu236578\\\\robotics\\\\runs\\\\rwrymtlp\\\\PPO_1\")","namespace":""}
+{"time":"2025-08-17T20:05:17.1800542+03:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\runs\\rwrymtlp\\PPO_1\\events.out.tfevents.1755450307.lil-rat.8364.0","runPath":"runs/rwrymtlp/PPO_1/events.out.tfevents.1755450307.lil-rat.8364.0"}
+{"time":"2025-08-17T20:05:17.1864004+03:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\runs\\rwrymtlp\\PPO_1\\events.out.tfevents.1755450307.lil-rat.8364.0","symlink":"C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\wandb\\run-20250817_200505-rwrymtlp\\files\\runs\\rwrymtlp\\PPO_1\\events.out.tfevents.1755450307.lil-rat.8364.0","error":"symlink C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\runs\\rwrymtlp\\PPO_1\\events.out.tfevents.1755450307.lil-rat.8364.0 C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\wandb\\run-20250817_200505-rwrymtlp\\files\\runs\\rwrymtlp\\PPO_1\\events.out.tfevents.1755450307.lil-rat.8364.0: A required privilege is not held by the client."}
+{"time":"2025-08-17T20:31:28.9401474+03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.79295,"progress":"895.7KB/895.7KB"}],"total_operations":1}}
+{"time":"2025-08-17T20:31:29.2839554+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-17T20:31:29.6382791+03:00","level":"INFO","msg":"stream: closing","id":"rwrymtlp"}
+{"time":"2025-08-17T20:31:29.6382791+03:00","level":"INFO","msg":"handler: closed","stream_id":"rwrymtlp"}
+{"time":"2025-08-17T20:31:29.6382791+03:00","level":"INFO","msg":"sender: closed","stream_id":"rwrymtlp"}
+{"time":"2025-08-17T20:31:29.6382791+03:00","level":"INFO","msg":"stream: closed","id":"rwrymtlp"}

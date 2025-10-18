@@ -1,0 +1,70 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            b4k2ag0ahw0kawdmjpbpbt8allawl5se:
+                codePath: datalab_tasks\task8\002_task_8 - Copy.ipynb
+                codePathLocal: 002_task_8 - Copy.ipynb
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "1023403880448"
+                        used: "632348786688"
+                email: 236578@buas.nl
+                executable: c:\Users\dari\anaconda3\envs\block_b\python.exe
+                git:
+                    commit: e4e6a5cd39ceaedaed7464695af2698d401dd428
+                    remote: https://github.com/BredaUniversityADSAI/2024-25b-fai2-adsai-dariavladutu236578
+                gpu: NVIDIA GeForce RTX 5060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 3328
+                      memoryTotal: "8546942976"
+                      name: NVIDIA GeForce RTX 5060 Laptop GPU
+                      uuid: GPU-d353880f-7888-eff5-1e1f-461fdba891cc
+                host: lil-rat
+                memory:
+                    total: "33598517248"
+                os: Windows-10-10.0.26100-SP0
+                program: c:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\datalab_tasks\task8\002_task_8 - Copy.ipynb
+                python: CPython 3.10.18
+                root: c:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\datalab_tasks\task8
+                startedAt: "2025-08-15T10:45:28.892107Z"
+                writerId: b4k2ag0ahw0kawdmjpbpbt8allawl5se
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 2
+                - 3
+            "2":
+                - 2
+                - 3
+            "3":
+                - 2
+                - 13
+                - 19
+            "4": 3.10.18
+            "5": 0.21.1
+            "8":
+                - 1
+                - 3
+            "12": 0.21.1
+            "13": windows-amd64
+aspect_ratio_threshold:
+    value: 1.5
+cropper_padding:
+    value: 10
+min_area_filter:
+    value: 50
+model_name:
+    value: dariavladutu_236578_unet_model4_256px.h5
+patch_size:
+    value: 256
+prediction_threshold:
+    value: 0.1
+top_crop_ratio:
+    value: 0.15

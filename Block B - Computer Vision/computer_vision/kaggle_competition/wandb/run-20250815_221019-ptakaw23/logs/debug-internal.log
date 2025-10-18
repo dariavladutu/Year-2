@@ -1,0 +1,12 @@
+{"time":"2025-08-15T22:10:20.0866983+03:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-15T22:10:20.8458923+03:00","level":"INFO","msg":"stream: created new stream","id":"ptakaw23"}
+{"time":"2025-08-15T22:10:20.8458923+03:00","level":"INFO","msg":"handler: started","stream_id":"ptakaw23"}
+{"time":"2025-08-15T22:10:20.846407+03:00","level":"INFO","msg":"stream: started","id":"ptakaw23"}
+{"time":"2025-08-15T22:10:20.846407+03:00","level":"INFO","msg":"writer: started","stream_id":"ptakaw23"}
+{"time":"2025-08-15T22:10:20.846407+03:00","level":"INFO","msg":"sender: started","stream_id":"ptakaw23"}
+{"time":"2025-08-15T22:52:48.4846837+03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact submission","runtime_seconds":1.2230682}],"total_operations":1}}
+{"time":"2025-08-15T22:52:49.4726981+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-15T22:52:49.750352+03:00","level":"INFO","msg":"stream: closing","id":"ptakaw23"}
+{"time":"2025-08-15T22:52:49.750352+03:00","level":"INFO","msg":"handler: closed","stream_id":"ptakaw23"}
+{"time":"2025-08-15T22:52:49.750352+03:00","level":"INFO","msg":"sender: closed","stream_id":"ptakaw23"}
+{"time":"2025-08-15T22:52:49.750352+03:00","level":"INFO","msg":"stream: closed","id":"ptakaw23"}

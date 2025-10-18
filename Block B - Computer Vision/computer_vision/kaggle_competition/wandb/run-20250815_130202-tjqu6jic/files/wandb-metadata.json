@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.10.18",
+  "startedAt":  "2025-08-15T10:02:02.276644Z",
+  "program":  "c:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\datalab_tasks\\task8\\002_task_8.ipynb",
+  "codePath":  "datalab_tasks\\task8\\002_task_8.ipynb",
+  "codePathLocal":  "002_task_8.ipynb",
+  "git":  {
+    "remote":  "https://github.com/BredaUniversityADSAI/2024-25b-fai2-adsai-dariavladutu236578",
+    "commit":  "e4e6a5cd39ceaedaed7464695af2698d401dd428"
+  },
+  "email":  "236578@buas.nl",
+  "root":  "c:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\datalab_tasks\\task8",
+  "host":  "lil-rat",
+  "executable":  "c:\\Users\\dari\\anaconda3\\envs\\block_b\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "1023403880448",
+      "used":  "579970793472"
+    }
+  },
+  "memory":  {
+    "total":  "33598517248"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "memoryTotal":  "8546942976",
+      "cudaCores":  3328,
+      "architecture":  "Blackwell",
+      "uuid":  "GPU-d353880f-7888-eff5-1e1f-461fdba891cc"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "eqtsatgtm770182m7fauempffcb9fff9"
+}

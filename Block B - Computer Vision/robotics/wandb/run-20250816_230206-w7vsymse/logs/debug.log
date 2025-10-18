@@ -1,0 +1,22 @@
+2025-08-16 23:02:06,694 INFO    MainThread:29240 [wandb_setup.py:_flush():80] Current SDK version is 0.21.1
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_setup.py:_flush():80] Configure stats pid to 29240
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_setup.py:_flush():80] Loading settings from C:\Users\dari\.config\wandb\settings
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_setup.py:_flush():80] Loading settings from C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\wandb\settings
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_init.py:setup_run_log_directory():703] Logging user logs to C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\wandb\run-20250816_230206-w7vsymse\logs\debug.log
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\wandb\run-20250816_230206-w7vsymse\logs\debug-internal.log
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_init.py:init():830] calling init triggers
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'policy_type': 'MlpPolicy', 'total_timesteps': 50000, 'env_name': 'OT2Env-v2', 'algorithm': 'PPO', 'learning_rate': 0.0003, 'n_steps': 2048, 'batch_size': 64, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, '_wandb': {'code_path': 'code/robotics/train_rl.py'}}
+2025-08-16 23:02:06,705 INFO    MainThread:29240 [wandb_init.py:init():871] starting backend
+2025-08-16 23:02:07,022 INFO    MainThread:29240 [wandb_init.py:init():874] sending inform_init request
+2025-08-16 23:02:07,035 INFO    MainThread:29240 [wandb_init.py:init():882] backend started and connected
+2025-08-16 23:02:07,037 INFO    MainThread:29240 [wandb_init.py:init():953] updated telemetry
+2025-08-16 23:02:07,084 INFO    MainThread:29240 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2025-08-16 23:02:07,847 INFO    MainThread:29240 [wandb_init.py:init():1029] starting run threads in backend
+2025-08-16 23:02:08,074 INFO    MainThread:29240 [wandb_run.py:_console_start():2494] atexit reg
+2025-08-16 23:02:08,074 INFO    MainThread:29240 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-08-16 23:02:08,074 INFO    MainThread:29240 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-08-16 23:02:08,074 INFO    MainThread:29240 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-08-16 23:02:08,077 INFO    MainThread:29240 [wandb_init.py:init():1075] run started, returning control to user process
+2025-08-16 23:02:08,274 INFO    MsgRouterThr:29240 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

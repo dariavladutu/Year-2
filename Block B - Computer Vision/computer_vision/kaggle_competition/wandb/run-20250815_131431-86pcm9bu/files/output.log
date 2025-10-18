@@ -1,0 +1,203 @@
+Found 11 images to process.
+
+--- Processing: test_image_1.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_10.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_11.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_2.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_3.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_4.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_5.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_6.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_7.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_8.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Processing: test_image_9.tif ---
+Step 3: Model prediction complete.
+Generating final alignment overlay...
+
+--- Segmenting Plants for: test_image_1.tif ---
+
+--- Segmenting Plants for: test_image_10.tif ---
+
+--- Segmenting Plants for: test_image_11.tif ---
+
+--- Segmenting Plants for: test_image_2.tif ---
+
+--- Segmenting Plants for: test_image_3.tif ---
+
+--- Segmenting Plants for: test_image_4.tif ---
+
+--- Segmenting Plants for: test_image_5.tif ---
+
+--- Segmenting Plants for: test_image_6.tif ---
+
+--- Segmenting Plants for: test_image_7.tif ---
+
+--- Segmenting Plants for: test_image_8.tif ---
+
+--- Segmenting Plants for: test_image_9.tif ---
+Saved: test_image_1_plant_1
+Saved: test_image_1_plant_2
+Saved: test_image_1_plant_3
+Saved: test_image_1_plant_4
+Saved: test_image_1_plant_5
+Saved: test_image_10_plant_1
+Saved: test_image_10_plant_2
+Saved: test_image_10_plant_3
+Saved: test_image_10_plant_4
+Saved: test_image_10_plant_5
+Saved: test_image_11_plant_1
+Saved: test_image_11_plant_2
+Saved: test_image_11_plant_3
+Saved: test_image_11_plant_4
+Saved: test_image_11_plant_5
+Saved: test_image_2_plant_1
+Saved: test_image_2_plant_2
+Saved: test_image_2_plant_3
+Saved: test_image_2_plant_4
+Saved: test_image_2_plant_5
+Saved: test_image_3_plant_1
+Saved: test_image_3_plant_2
+Saved: test_image_3_plant_3
+Saved: test_image_3_plant_4
+Saved: test_image_3_plant_5
+Saved: test_image_4_plant_1
+Saved: test_image_4_plant_2
+Saved: test_image_4_plant_3
+Saved: test_image_4_plant_4
+Saved: test_image_4_plant_5
+Saved: test_image_5_plant_1
+Saved: test_image_5_plant_2
+Saved: test_image_5_plant_3
+Saved: test_image_5_plant_4
+Saved: test_image_5_plant_5
+Saved: test_image_6_plant_1
+Saved: test_image_6_plant_2
+Saved: test_image_6_plant_3
+Saved: test_image_6_plant_4
+Saved: test_image_6_plant_5
+Saved: test_image_7_plant_1
+Saved: test_image_7_plant_2
+Saved: test_image_7_plant_3
+Saved: test_image_7_plant_4
+Saved: test_image_7_plant_5
+Saved: test_image_8_plant_1
+Saved: test_image_8_plant_2
+Saved: test_image_8_plant_3
+Saved: test_image_8_plant_4
+Saved: test_image_8_plant_5
+Saved: test_image_9_plant_1
+Saved: test_image_9_plant_2
+Saved: test_image_9_plant_3
+Saved: test_image_9_plant_4
+Saved: test_image_9_plant_5
+
+--- Analyzing and Visualizing: test_image_1.tif ---
+C:\Users\dari\AppData\Local\Temp\ipykernel_39276\4013818755.py:359: VisibleDeprecationWarning: separator in column name will change to _ in version 0.13; to silence this warning, use `separator='-'` to maintain current behavior and use `separator='_'` to switch to the new default behavior.
+  branch_data = summarize(skeleton_obj)
+  Plant 1: Found primary root of length 614.56 pixels.
+  Plant 2: Found primary root of length 537.61 pixels.
+  Plant 3: Found primary root of length 702.10 pixels.
+  Plant 4: Found primary root of length 448.95 pixels.
+  Plant 5: Found primary root of length 666.98 pixels.
+
+--- Analyzing and Visualizing: test_image_10.tif ---
+  Plant 1: Found primary root of length 644.82 pixels.
+  Plant 2: Found primary root of length 721.40 pixels.
+  Plant 3: Found primary root of length 807.05 pixels.
+  Plant 4: Found primary root of length 835.80 pixels.
+  Plant 5: Found primary root of length 745.48 pixels.
+
+--- Analyzing and Visualizing: test_image_11.tif ---
+  Plant 1: Found primary root of length 633.49 pixels.
+  Plant 2: Found primary root of length 1155.77 pixels.
+  Could not analyze Plant 3. Storing length 0.
+  Plant 4: Found primary root of length 1384.67 pixels.
+  Plant 5: Found primary root of length 1595.66 pixels.
+
+--- Analyzing and Visualizing: test_image_2.tif ---
+  Plant 1: Found primary root of length 1136.63 pixels.
+  Plant 2: Found primary root of length 1652.83 pixels.
+  Plant 3: Found primary root of length 1288.69 pixels.
+  Plant 4: Found primary root of length 1333.87 pixels.
+  Plant 5: Found primary root of length 1124.27 pixels.
+
+--- Analyzing and Visualizing: test_image_3.tif ---
+  Plant 1: Found primary root of length 1459.89 pixels.
+  Plant 2: Found primary root of length 1419.93 pixels.
+  Plant 3: Found primary root of length 1464.58 pixels.
+  Plant 4: Found primary root of length 1551.03 pixels.
+  Plant 5: Found primary root of length 1542.56 pixels.
+
+--- Analyzing and Visualizing: test_image_4.tif ---
+  Plant 1: Found primary root of length 1009.83 pixels.
+  Plant 2: Found primary root of length 1243.38 pixels.
+  Plant 3: Found primary root of length 969.62 pixels.
+  Plant 4: Found primary root of length 1035.94 pixels.
+  Plant 5: Found primary root of length 1000.79 pixels.
+
+--- Analyzing and Visualizing: test_image_5.tif ---
+  Plant 1: Found primary root of length 1472.31 pixels.
+  Plant 2: Found primary root of length 1218.92 pixels.
+  Plant 3: Found primary root of length 1125.09 pixels.
+  Plant 4: Found primary root of length 1338.07 pixels.
+  Plant 5: Found primary root of length 1532.71 pixels.
+
+--- Analyzing and Visualizing: test_image_6.tif ---
+  Plant 1: Found primary root of length 238.07 pixels.
+  Plant 2: Found primary root of length 151.30 pixels.
+  Could not analyze Plant 3. Storing length 0.
+  Could not analyze Plant 4. Storing length 0.
+  Could not analyze Plant 5. Storing length 0.
+
+--- Analyzing and Visualizing: test_image_7.tif ---
+  Plant 1: Found primary root of length 258.63 pixels.
+  Plant 2: Found primary root of length 153.91 pixels.
+  Plant 3: Found primary root of length 44.38 pixels.
+  Plant 4: Found primary root of length 157.67 pixels.
+  Plant 5: Found primary root of length 140.30 pixels.
+
+--- Analyzing and Visualizing: test_image_8.tif ---
+  Plant 1: Found primary root of length 304.47 pixels.
+  Plant 2: Found primary root of length 307.50 pixels.
+  Plant 3: Found primary root of length 344.10 pixels.
+  Plant 4: Found primary root of length 351.23 pixels.
+  Plant 5: Found primary root of length 282.95 pixels.
+
+--- Analyzing and Visualizing: test_image_9.tif ---
+  Plant 1: Found primary root of length 423.21 pixels.
+  Plant 2: Found primary root of length 404.97 pixels.
+  Could not analyze Plant 3. Storing length 0.
+  Plant 4: Found primary root of length 462.22 pixels.
+  Plant 5: Found primary root of length 425.82 pixels.
+Saved submission to:
+C:\BUAS\retake\2024-25b-fai2-adsai-dariavladutu236578\datalab_tasks\task8\002_submission.csv

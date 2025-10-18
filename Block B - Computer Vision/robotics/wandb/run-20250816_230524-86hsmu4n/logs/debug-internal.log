@@ -1,0 +1,17 @@
+{"time":"2025-08-16T23:05:24.5966862+03:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-16T23:05:24.9596418+03:00","level":"INFO","msg":"stream: created new stream","id":"86hsmu4n"}
+{"time":"2025-08-16T23:05:24.9601809+03:00","level":"INFO","msg":"stream: started","id":"86hsmu4n"}
+{"time":"2025-08-16T23:05:24.9601809+03:00","level":"INFO","msg":"writer: started","stream_id":"86hsmu4n"}
+{"time":"2025-08-16T23:05:24.9601809+03:00","level":"INFO","msg":"handler: started","stream_id":"86hsmu4n"}
+{"time":"2025-08-16T23:05:24.9601809+03:00","level":"INFO","msg":"sender: started","stream_id":"86hsmu4n"}
+{"time":"2025-08-16T23:05:25.2414008+03:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-08-16T23:05:36.6450703+03:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-08-16T23:05:36.6450703+03:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\dari\\\\Documents\\\\GitHub\\\\2024-25b-fai2-adsai-dariavladutu236578\\\\robotics\\\\runs\\\\86hsmu4n\\\\PPO_1\")","namespace":""}
+{"time":"2025-08-16T23:05:36.6455822+03:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\runs\\86hsmu4n\\PPO_1\\events.out.tfevents.1755374726.lil-rat.28608.0","runPath":"runs/86hsmu4n/PPO_1/events.out.tfevents.1755374726.lil-rat.28608.0"}
+{"time":"2025-08-16T23:05:36.6517699+03:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\runs\\86hsmu4n\\PPO_1\\events.out.tfevents.1755374726.lil-rat.28608.0","symlink":"C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\wandb\\run-20250816_230524-86hsmu4n\\files\\runs\\86hsmu4n\\PPO_1\\events.out.tfevents.1755374726.lil-rat.28608.0","error":"symlink C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\runs\\86hsmu4n\\PPO_1\\events.out.tfevents.1755374726.lil-rat.28608.0 C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\wandb\\run-20250816_230524-86hsmu4n\\files\\runs\\86hsmu4n\\PPO_1\\events.out.tfevents.1755374726.lil-rat.28608.0: A required privilege is not held by the client."}
+{"time":"2025-08-16T23:06:03.910458+03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.7111672,"progress":"22.7KB/22.7KB"},{"desc":"uploading config.yaml","runtime_seconds":0.5568882,"progress":"5.2KB/5.2KB"}],"total_operations":2}}
+{"time":"2025-08-16T23:06:04.0110222+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-16T23:06:04.5899298+03:00","level":"INFO","msg":"stream: closing","id":"86hsmu4n"}
+{"time":"2025-08-16T23:06:04.5899298+03:00","level":"INFO","msg":"handler: closed","stream_id":"86hsmu4n"}
+{"time":"2025-08-16T23:06:04.5899298+03:00","level":"INFO","msg":"sender: closed","stream_id":"86hsmu4n"}
+{"time":"2025-08-16T23:06:04.5899298+03:00","level":"INFO","msg":"stream: closed","id":"86hsmu4n"}

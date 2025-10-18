@@ -1,0 +1,72 @@
+2025-08-15 13:14:31,841 INFO    MainThread:39276 [wandb_init.py:setup_run_log_directory():703] Logging user logs to c:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\datalab_tasks\task8\wandb\run-20250815_131431-86pcm9bu\logs\debug.log
+2025-08-15 13:14:31,842 INFO    MainThread:39276 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to c:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\datalab_tasks\task8\wandb\run-20250815_131431-86pcm9bu\logs\debug-internal.log
+2025-08-15 13:14:31,842 INFO    MainThread:39276 [wandb_init.py:monkeypatch_ipython():622] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001D56733E0B0>
+2025-08-15 13:14:31,842 INFO    MainThread:39276 [wandb_init.py:init():830] calling init triggers
+2025-08-15 13:14:31,843 INFO    MainThread:39276 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-08-15 13:14:31,843 INFO    MainThread:39276 [wandb_init.py:init():871] starting backend
+2025-08-15 13:14:31,843 INFO    MainThread:39276 [wandb_init.py:init():874] sending inform_init request
+2025-08-15 13:14:31,844 INFO    MainThread:39276 [wandb_init.py:init():882] backend started and connected
+2025-08-15 13:14:31,845 INFO    MainThread:39276 [wandb_run.py:_label_probe_notebook():1318] probe notebook
+2025-08-15 13:14:31,862 INFO    MainThread:39276 [wandb_init.py:init():953] updated telemetry
+2025-08-15 13:14:31,900 INFO    MainThread:39276 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2025-08-15 13:14:32,568 INFO    MainThread:39276 [wandb_init.py:init():1029] starting run threads in backend
+2025-08-15 13:14:32,797 INFO    MainThread:39276 [wandb_run.py:_console_start():2494] atexit reg
+2025-08-15 13:14:32,797 INFO    MainThread:39276 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-08-15 13:14:32,797 INFO    MainThread:39276 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-08-15 13:14:32,797 INFO    MainThread:39276 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-08-15 13:14:32,798 INFO    MainThread:39276 [wandb_init.py:init():1075] run started, returning control to user process
+2025-08-15 13:14:32,798 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set model_name = dariavladutu_236578_unet_model2_256px.h5 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,798 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb model_name dariavladutu_236578_unet_model2_256px.h5 None
+2025-08-15 13:14:32,798 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set patch_size = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,798 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb patch_size 256 None
+2025-08-15 13:14:32,799 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set prediction_threshold = 0.1 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,799 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb prediction_threshold 0.1 None
+2025-08-15 13:14:32,799 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set cropper_padding = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,799 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb cropper_padding 10 None
+2025-08-15 13:14:32,799 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set min_area_filter = 50 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,799 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb min_area_filter 50 None
+2025-08-15 13:14:32,800 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set top_crop_ratio = 0.15 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,800 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb top_crop_ratio 0.15 None
+2025-08-15 13:14:32,800 INFO    MainThread:39276 [wandb_config.py:__setitem__():154] [no run ID] config set aspect_ratio_threshold = 1.5 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001D4E7BA2F20>>
+2025-08-15 13:14:32,800 INFO    MainThread:39276 [wandb_run.py:_config_callback():1380] config_cb aspect_ratio_threshold 1.5 None
+2025-08-15 13:14:32,800 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:14:32,817 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:14:32,817 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:14:33,577 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:14:33,583 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:14:33,584 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:14:54,481 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:14:54,496 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:14:54,496 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:15:15,685 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:15:15,705 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:15:15,705 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:15:41,914 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:15:41,930 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:15:41,930 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:15:49,380 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:15:49,397 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:15:49,397 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:16:31,213 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:16:31,236 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:16:31,236 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:16:32,115 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:16:32,134 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:16:32,140 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:17:00,584 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:17:00,600 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:17:00,600 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:17:00,606 INFO    MainThread:39276 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-08-15 13:17:00,618 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-08-15 13:17:00,618 INFO    MainThread:39276 [wandb_init.py:_pre_run_cell_hook():581] [no run ID] pausing backend
+2025-08-15 13:17:01,312 INFO    MainThread:39276 [wandb_run.py:_finish():2260] finishing run 236578-breda-university-of-applied-sciences/Hades-Root-Length-Kaggle/86pcm9bu
+2025-08-15 13:17:01,326 INFO    MainThread:39276 [jupyter.py:save_history():480] not saving jupyter history
+2025-08-15 13:17:01,326 INFO    MainThread:39276 [jupyter.py:save_ipynb():404] not saving jupyter notebook
+2025-08-15 13:17:01,326 INFO    MainThread:39276 [wandb_init.py:_jupyter_teardown():607] cleaning up jupyter logic
+2025-08-15 13:17:01,326 INFO    MainThread:39276 [wandb_run.py:_atexit_cleanup():2459] got exitcode: 0
+2025-08-15 13:17:01,326 INFO    MainThread:39276 [wandb_run.py:_restore():2441] restore
+2025-08-15 13:17:01,326 INFO    MainThread:39276 [wandb_run.py:_restore():2447] restore done
+2025-08-15 13:17:03,105 INFO    MainThread:39276 [wandb_run.py:_footer_history_summary_info():3895] rendering history
+2025-08-15 13:17:03,106 INFO    MainThread:39276 [wandb_run.py:_footer_history_summary_info():3927] rendering summary
+2025-08-15 13:17:03,106 INFO    MainThread:39276 [wandb_run.py:_footer_sync_info():3856] logging synced files

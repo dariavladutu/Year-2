@@ -1,0 +1,15 @@
+--- Starting RL Agent Training (Local) ---
+Algorithm: PPO, Timesteps: 50000
+Hyperparameters: {'policy_type': 'MlpPolicy', 'total_timesteps': 50000, 'env_name': 'OT2Env-v2', 'algorithm': 'PPO', 'learning_rate': 0.0003, 'n_steps': 2048, 'batch_size': 64, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2}
+Traceback (most recent call last):
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 110, in <module>
+    main(args)
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 48, in main
+    env = OT2Env(render=False) # Set render=True to watch the training
+TypeError: OT2Env.__init__() got an unexpected keyword argument 'render'
+Traceback (most recent call last):
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 110, in <module>
+    main(args)
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 48, in main
+    env = OT2Env(render=False) # Set render=True to watch the training
+TypeError: OT2Env.__init__() got an unexpected keyword argument 'render'

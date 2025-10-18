@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.10.18",
+  "startedAt":  "2025-08-22T11:05:08.231757Z",
+  "program":  "C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics\\train_rl.py",
+  "codePath":  "robotics\\train_rl.py",
+  "codePathLocal":  "train_rl.py",
+  "git":  {
+    "remote":  "https://github.com/BredaUniversityADSAI/2024-25b-fai2-adsai-dariavladutu236578",
+    "commit":  "b7c37585b0bba977b3c6f73258a440c1c6ff16ce"
+  },
+  "email":  "236578@buas.nl",
+  "root":  "C:\\Users\\dari\\Documents\\GitHub\\2024-25b-fai2-adsai-dariavladutu236578\\robotics",
+  "host":  "lil-rat",
+  "executable":  "C:\\Users\\dari\\anaconda3\\envs\\block_b\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "1023403880448",
+      "used":  "487186538496"
+    }
+  },
+  "memory":  {
+    "total":  "33598517248"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "memoryTotal":  "8546942976",
+      "cudaCores":  3328,
+      "architecture":  "Blackwell",
+      "uuid":  "GPU-d353880f-7888-eff5-1e1f-461fdba891cc"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "uc49cinxm3fsxlw9zx6udkztj6cc7cii"
+}

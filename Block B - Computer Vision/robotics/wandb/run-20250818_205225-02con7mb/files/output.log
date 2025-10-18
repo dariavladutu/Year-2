@@ -1,0 +1,19 @@
+--- Starting RL Agent Training (Final Tuning) ---
+Timesteps: 3000000
+Hyperparameters: {'policy_type': 'MlpPolicy', 'total_timesteps': 3000000, 'env_name': 'OT2Env-v2', 'algorithm': 'PPO', 'learning_rate': 0.0001, 'n_steps': 2048, 'batch_size': 64, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2}
+C:\Users\dari\anaconda3\envs\block_b\lib\site-packages\gymnasium\spaces\box.py:236: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+C:\Users\dari\anaconda3\envs\block_b\lib\site-packages\gymnasium\spaces\box.py:306: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Traceback (most recent call last):
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 117, in <module>
+    main(args)
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 64, in main
+    lr_schedule = get_linear_fn(
+TypeError: get_linear_fn() got an unexpected keyword argument 'start_value'
+Traceback (most recent call last):
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 117, in <module>
+    main(args)
+  File "C:\Users\dari\Documents\GitHub\2024-25b-fai2-adsai-dariavladutu236578\robotics\train_rl.py", line 64, in main
+    lr_schedule = get_linear_fn(
+TypeError: get_linear_fn() got an unexpected keyword argument 'start_value'
