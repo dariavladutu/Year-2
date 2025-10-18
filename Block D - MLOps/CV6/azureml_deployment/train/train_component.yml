@@ -1,0 +1,51 @@
+name: train
+display_name: Train Segmentation Mask
+type: command
+
+inputs:
+  model:
+    type: uri_file
+  learning_rate:
+    type: number
+    default: 0.0001
+  decay_steps:
+    type: integer
+    default: 100
+  decay_rate:
+    type: number
+    default: 0.9
+  staircase:
+    type: boolean
+    default: True
+  epochs:
+    type: integer
+    default: 30
+  patch_size:
+    type: integer
+    default: 256
+  batch_size:
+    type: integer
+    default: 16
+  data:
+    type: uri_folder
+
+outputs:
+  output_model:
+    type: uri_folder
+
+environment: azureml_deployment:iris:0.6.0
+
+code: ../../
+
+command: >-
+  python src/utils/model_train.py
+  --model ${{inputs.model}}/model.h5
+  --data ${{inputs.data}}
+  --learning_rate ${{inputs.learning_rate}}
+  --decay_steps ${{inputs.decay_steps}}
+  --decay_rate ${{inputs.decay_rate}}
+  --staircase ${{inputs.staircase}}
+  --epochs ${{inputs.epochs}}
+  --batch_size ${{inputs.batch_size}}
+  --patch_size ${{inputs.patch_size}}
+  --output_model ${{outputs.output_model}}

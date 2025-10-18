@@ -1,0 +1,21 @@
+src.azureml\_pipeline.jobs package
+==================================
+
+Submodules
+----------
+
+src.azureml\_pipeline.jobs.pipeline\_job module
+-----------------------------------------------
+
+.. automodule:: src.azureml_pipeline.jobs.pipeline_job
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.jobs
+   :members:
+   :undoc-members:
+   :show-inheritance:

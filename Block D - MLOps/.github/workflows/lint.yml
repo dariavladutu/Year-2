@@ -1,0 +1,50 @@
+name: Lint and Type Check
+
+on:
+  push:
+    branches: [Unit-test, main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9.22'
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+        working-directory: CV6
+
+      - name: Install dependencies
+        run: poetry install
+        working-directory: CV6
+
+      - name: Install code fix tools (black, isort, autoflake)
+        run: |
+          poetry run pip install black isort autoflake flake8 pyflakes>=2.5.0
+        working-directory: CV6
+
+      - name: Auto-fix Python code (format, sort, clean)
+        run: |
+          poetry run autoflake --in-place --remove-all-unused-imports --remove-unused-variables -r src/
+          poetry run isort src/
+          poetry run black src/
+        working-directory: CV6
+
+      - name: Run flake8 (lint check)
+        run: poetry run flake8 src/
+        working-directory: CV6
+
+      - name: Run black (code style check)
+        run: poetry run black --check src/
+        working-directory: CV6
+

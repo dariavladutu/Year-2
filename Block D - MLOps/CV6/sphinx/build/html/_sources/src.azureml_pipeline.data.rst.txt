@@ -1,0 +1,10 @@
+src.azureml\_pipeline.data package
+==================================
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.data
+   :members:
+   :undoc-members:
+   :show-inheritance:

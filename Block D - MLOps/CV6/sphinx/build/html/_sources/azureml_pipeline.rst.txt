@@ -1,0 +1,7 @@
+AzureML Pipeline Module
+=======================
+
+.. automodule:: azureml_pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:

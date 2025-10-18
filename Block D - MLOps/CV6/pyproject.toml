@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "cv6"
+version = "0.1.0"
+description = "Production-ready CV6 ML package designed for researchers."
+authors = ["Daria Vlăduțu", "Mădălina Carcea", "Sally Ibrahim", "Viktória Kubišová", "Victoria Vicheva"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "app", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+tensorflow = "2.15.0"
+tensorflow-io-gcs-filesystem = "0.31.0"
+numpy = "*"
+pandas = "*"
+keras = "*"
+scikit-learn = "*"
+matplotlib = "*"
+tqdm = "*"
+opencv-python = "*"
+Pillow = "*"
+patchify = "*"
+scikit-image = "*"
+skan = "*"
+networkx = "*"
+tifffile = "*"
+sphinx = "*"
+pytest = "*"
+fastapi = "*"
+python-multipart = "*"
+uvicorn = "*"
+seaborn = "*"
+azure-ai-ml = "^1.17"
+azure-identity = "^1.15"
+apache-airflow = { version = "^2.9.0", extras = ["celery", "async", "sqlite"] }
+azureml-core = "^1.53"
+azureml-dataset-runtime = "^1.53.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+flake8 = "^7.3.0"
+pytest = "*"
+coverage = "*"
+mypy = "*"
+jupyter = "*"
+isort = "^6.0.1"
+flake8-docstrings = "*"
+
+pydocstyle = "^6.3.0"
+pytest-cov = "^6.2.1"

@@ -1,0 +1,34 @@
+src.azureml\_pipeline package
+=============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.azureml_pipeline.components
+   src.azureml_pipeline.data
+   src.azureml_pipeline.environments
+   src.azureml_pipeline.jobs
+   src.azureml_pipeline.pipelines
+   src.azureml_pipeline.setup
+
+Submodules
+----------
+
+src.azureml\_pipeline.main module
+---------------------------------
+
+.. automodule:: src.azureml_pipeline.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:

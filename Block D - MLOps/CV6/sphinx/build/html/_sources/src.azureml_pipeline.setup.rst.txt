@@ -1,0 +1,21 @@
+src.azureml\_pipeline.setup package
+===================================
+
+Submodules
+----------
+
+src.azureml\_pipeline.setup.ml\_client\_setup module
+----------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.setup.ml_client_setup
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.setup
+   :members:
+   :undoc-members:
+   :show-inheritance:

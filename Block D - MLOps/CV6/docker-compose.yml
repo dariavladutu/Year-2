@@ -1,0 +1,22 @@
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "3185:8000"
+
+    # ONLY mount models (avoid overwriting src or frontend_simple)
+    volumes:
+      - ./models:/app/models
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

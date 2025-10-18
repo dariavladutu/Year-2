@@ -1,0 +1,1 @@
+# When/why/how retraining happens (manual/triggered, scheduled, etc.)

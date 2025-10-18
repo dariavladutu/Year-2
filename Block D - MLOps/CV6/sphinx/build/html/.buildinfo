@@ -1,0 +1,8 @@
+# Sphinx build info version 1
+# This file records the configuration used when building these files. When it is not found, a full rebuild will be done.
+<<<<<<< HEAD
+config: 7afcb02daadbd33b90cf1ba55a558aba
+=======
+config: f65e189245cb06f7b9f76f7270820a14
+>>>>>>> 54875c9 (moved azureml_pipeline out of src to cv6 and updating s)
+tags: 645f666f9bcd5a90fca523b33c5a78b7

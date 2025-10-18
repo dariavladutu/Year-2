@@ -1,0 +1,1 @@
+# Trained machine learning models, model artifacts, and model checkpoints. Keep them organized for easy retrieval and deployment.

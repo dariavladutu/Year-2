@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRIS - Plant Root Segmentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #9333ea 0%, #ec4899 50%, #9333ea 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .header .subtitle {
+            font-size: 1.5rem;
+            color: #e9d5ff;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .header .description {
+            font-size: 1.125rem;
+            color: #ddd6fe;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .main-interface {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 3rem;
+        }
+
+        .main-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .step {
+            background: linear-gradient(to right, #faf5ff, #fdf2f8);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .step-number {
+            background: #9333ea;
+            color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .model-selector {
+            width: 100%;
+            height: 3rem;
+            background: white;
+            border: 2px solid #ddd6fe;
+            border-radius: 0.75rem;
+            padding: 0 1rem;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .model-selector:focus {
+            border-color: #9333ea;
+            box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+        }
+
+        .loading-state {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 0.75rem;
+            border: 2px dashed #ddd6fe;
+        }
+
+        .loading-spinner {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #ddd6fe;
+            border-top: 2px solid #9333ea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 0.75rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-state {
+            padding: 2rem;
+            background: #fef2f2;
+            border-radius: 0.75rem;
+            border: 2px solid #fca5a5;
+            text-align: center;
+        }
+
+        .error-state h3 {
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .error-state p {
+            color: #ef4444;
+            font-size: 0.875rem;
+        }
+
+        .debug-output {
+            margin-top: 1rem;
+            background: #f3f4f6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: #4b5563;
+            white-space: pre-wrap;
+        }
+
+        .file-upload-area {
+            position: relative;
+            border: 2px dashed #ddd6fe;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .file-upload-area:hover {
+            border-color: #c4b5fd;
+            background: rgba(147, 51, 234, 0.025);
+        }
+
+        .file-upload-area.drag-over {
+            border-color: #9333ea;
+            background: #faf5ff;
+        }
+
+        .upload-icon {
+            background: linear-gradient(to right, #9333ea, #ec4899);
+            border-radius: 50%;
+            padding: 1rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .upload-text h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-text p {
+            color: #6b7280;
+        }
+
+        .upload-text .formats {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .selected-files {
+            background: white;
+            border: 1px solid #ddd6fe;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .files-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .files-title {
+            font-weight: 600;
+            color: #374151;
+            display: flex;
+            align-items: center;
+        }
+
+        .clear-all-btn {
+            color: #ef4444;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            transition: color 0.2s;
+        }
+
+        .clear-all-btn:hover {
+            color: #dc2626;
+        }
+
+        .files-list {
+            max-height: 8rem;
+            overflow-y: auto;
+        }
+
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .file-info .name {
+            font-weight: 500;
+            color: #374151;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .file-info .size {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .remove-file-btn {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            transition: color 0.2s;
+        }
+
+        .remove-file-btn:hover {
+            color: #dc2626;
+        }
+
+        .segment-button {
+            width: 100%;
+            height: 3.5rem;
+            background: linear-gradient(to right, #9333ea, #ec4899);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .segment-button:hover:not(:disabled) {
+            background: linear-gradient(to right, #7c3aed, #db2777);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .segment-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status-display {
+            border-radius: 0.75rem;
+            border: 2px solid;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .status-display.loading {
+            background: #eff6ff;
+            border-color: #93c5fd;
+            color: #1e40af;
+        }
+
+        .status-display.success {
+            background: #f0fdf4;
+            border-color: #86efac;
+            color: #166534;
+        }
+
+        .status-display.error {
+            background: #fef2f2;
+            border-color: #fca5a5;
+            color: #dc2626;
+        }
+
+        .status-display.idle {
+            background: #f9fafb;
+            border-color: #e5e7eb;
+            color: #374151;
+        }
+
+        .status-icon {
+            margin-right: 0.75rem;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #ddd6fe;
+            font-size: 0.875rem;
+        }
+
+        /* Icons */
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+        }
+
+        .icon-large {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .main-interface {
+                padding: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Welcome to IRIS</h1>
+            <p class="subtitle">Let your roots speak - Intelligent phenotyping</p>
+            <p class="description">Image-based Root Inspection and Segmentation platform for plant phenotyping
+                research</p>
+        </div>
+
+        <!-- Main Interface -->
+        <div class="main-interface">
+            <h2 class="main-title">Segment Plant Roots</h2>
+
+            <!-- Step 1 - Model Selection -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <h3 class="step-title">Select Model</h3>
+                </div>
+                <div id="modelSelectorContainer">
+                    <div class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <span>Loading models...</span>
+                    </div>
+                </div>
+                <div id="debugOutput" class="debug-output" style="display: none;"></div>
+            </div>
+
+            <!-- Step 2 - File Upload -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number" style="background: #ec4899;">2</span>
+                    <h3 class="step-title">Upload Images</h3>
+                </div>
+                <div class="file-upload-area" id="fileUploadArea">
+                    <input type="file" id="fileInput" class="file-input" accept="image/png,image/jpeg,image/tiff"
+                        multiple>
+                    <div class="upload-icon">
+                        <svg class="icon-large" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                        </svg>
+                    </div>
+                    <div class="upload-text">
+                        <h3>Upload your plant root images</h3>
+                        <p>Drag and drop files here, or click to browse</p>
+                        <p class="formats">Supported formats: PNG, JPEG, TIFF</p>
+                    </div>
+                </div>
+                <div id="selectedFiles" style="display: none;"></div>
+            </div>
+
+            <!-- Step 3 - Process -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number" style="background: linear-gradient(to right, #9333ea, #ec4899);">3</span>
+                    <h3 class="step-title">Process Images</h3>
+                </div>
+                <button id="segmentButton" class="segment-button" disabled>
+                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
+                        <path d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+                    </svg>
+                    Segment Images
+                </button>
+            </div>
+
+            <!-- Status Display -->
+            <div id="statusDisplay" style="display: none;"></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Advanced plant phenotyping powered by AI • IRIS Platform</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE = "http://localhost:8000";
+
+        // Global state
+        let models = [];
+        let selectedModel = '';
+        let selectedFiles = [];
+        let isLoading = false;
+
+        // DOM elements
+        const modelSelectorContainer = document.getElementById('modelSelectorContainer');
+        const debugOutput = document.getElementById('debugOutput');
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const selectedFilesContainer = document.getElementById('selectedFiles');
+        const segmentButton = document.getElementById('segmentButton');
+        const statusDisplay = document.getElementById('statusDisplay');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function () {
+            loadModels();
+            setupFileUpload();
+            setupSegmentButton();
+        });
+
+        // Load models from API
+        async function loadModels() {
+            try {
+                const res = await fetch(`${API_BASE}/model_management/models`);
+                if (!res.ok) throw new Error(`Server returned ${res.status}`);
+                const modelsData = await res.json();
+
+                if (!modelsData.length) {
+                    renderNoModels();
+                    debugOutput.textContent = "No .h5 models were found on the backend.";
+                    debugOutput.style.display = 'block';
+                    return;
+                }
+
+                models = modelsData;
+                renderModelSelector();
+                debugOutput.textContent = "Loaded models:\n" + modelsData.map(m => `• ${m.id}`).join("\n");
+                debugOutput.style.display = 'block';
+            } catch (err) {
+                console.error(err);
+                renderModelError();
+                debugOutput.textContent = "Error: Could not load model list from API.";
+                debugOutput.style.display = 'block';
+            }
+        }
+
+        function renderModelSelector() {
+            modelSelectorContainer.innerHTML = `
+                <select class="model-selector" id="modelSelect">
+                    <option value="">Choose a segmentation model...</option>
+                    ${models.map(model => `
+                        <option value="${model.id}">${model.description} (${model.id})</option>
+                    `).join('')}
+                </select>
+            `;
+
+            document.getElementById('modelSelect').addEventListener('change', function (e) {
+                selectedModel = e.target.value;
+                updateSegmentButton();
+            });
+        }
+
+        function renderNoModels() {
+            modelSelectorContainer.innerHTML = `
+                <div class="error-state">
+                    <h3>No models found</h3>
+                    <p>No .h5 models were found on the backend.</p>
+                </div>
+            `;
+        }
+
+        function renderModelError() {
+            modelSelectorContainer.innerHTML = `
+                <div class="error-state">
+                    <h3>Error loading models</h3>
+                    <p>Could not connect to the API server.</p>
+                </div>
+            `;
+        }
+
+        // File upload functionality
+        function setupFileUpload() {
+            fileUploadArea.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', handleFileSelect);
+
+            // Drag and drop
+            fileUploadArea.addEventListener('dragover', handleDragOver);
+            fileUploadArea.addEventListener('dragleave', handleDragLeave);
+            fileUploadArea.addEventListener('drop', handleDrop);
+        }
+
+        function handleFileSelect(e) {
+            const files = Array.from(e.target.files);
+            selectedFiles = files;
+            renderSelectedFiles();
+            updateSegmentButton();
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            fileUploadArea.classList.add('drag-over');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            fileUploadArea.classList.remove('drag-over');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            fileUploadArea.classList.remove('drag-over');
+            const files = Array.from(e.dataTransfer.files);
+            selectedFiles = files;
+            fileInput.files = e.dataTransfer.files;
+            renderSelectedFiles();
+            updateSegmentButton();
+        }
+
+        function renderSelectedFiles() {
+            if (selectedFiles.length === 0) {
+                selectedFilesContainer.style.display = 'none';
+                return;
+            }
+
+            selectedFilesContainer.style.display = 'block';
+            selectedFilesContainer.innerHTML = `
+                <div class="selected-files">
+                    <div class="files-header">
+                        <h4 class="files-title">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;">
+                                <path d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+                            </svg>
+                            Selected Files (${selectedFiles.length})
+                        </h4>
+                        <button class="clear-all-btn" onclick="clearAllFiles()">Clear All</button>
+                    </div>
+                    <div class="files-list">
+                        ${selectedFiles.map((file, index) => `
+                            <div class="file-item">
+                                <div class="file-info">
+                                    <svg class="icon" fill="#9333ea" viewBox="0 0 24 24">
+                                        <path d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+                                    </svg>
+                                    <span class="name">${file.name}</span>
+                                    <span class="size">(${(file.size / 1024 / 1024).toFixed(1)} MB)</span>
+                                </div>
+                                <button class="remove-file-btn" onclick="removeFile(${index})">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+
+            // Update file input
+            const dt = new DataTransfer();
+            selectedFiles.forEach(file => dt.items.add(file));
+            fileInput.files = dt.files;
+
+            renderSelectedFiles();
+            updateSegmentButton();
+        }
+
+        function clearAllFiles() {
+            selectedFiles = [];
+            fileInput.value = '';
+            renderSelectedFiles();
+            updateSegmentButton();
+        }
+
+        // Segment button functionality
+        function setupSegmentButton() {
+            segmentButton.addEventListener('click', submitSegmentation);
+        }
+
+        function updateSegmentButton() {
+            const canSubmit = selectedModel && selectedFiles.length > 0 && !isLoading;
+            segmentButton.disabled = !canSubmit;
+
+            if (isLoading) {
+                segmentButton.innerHTML = `
+                    <div class="loading-spinner" style="margin-right: 0.75rem;"></div>
+                    Processing Images...
+                `;
+            } else {
+                segmentButton.innerHTML = `
+                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
+                        <path d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+                    </svg>
+                    Segment Images
+                `;
+            }
+        }
+
+        // Submit segmentation
+        async function submitSegmentation() {
+            if (!selectedModel) {
+                showStatus("Please select a model.", 'error');
+                return;
+            }
+            if (selectedFiles.length === 0) {
+                showStatus("Please upload at least one image.", 'error');
+                return;
+            }
+
+            const formData = new FormData();
+            selectedFiles.forEach(file => formData.append("files", file));
+            formData.append("model_id", selectedModel);
+
+            isLoading = true;
+            updateSegmentButton();
+            showStatus("Segmenting, please wait…", 'loading');
+
+            try {
+                const res = await fetch(`${API_BASE}/segment/`, {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (!res.ok) throw new Error(await res.text());
+
+                const blob = await res.blob();
+                const dispo = res.headers.get("Content-Disposition") || "";
+                const fname = (dispo.split("filename=")[1] || "result.tif").replace(/"/g, "");
+
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = fname;
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+
+                showStatus("Segmentation complete – file downloaded.", 'success');
+            } catch (err) {
+                console.error(err);
+                showStatus("Error: " + err.message, 'error');
+            } finally {
+                isLoading = false;
+                updateSegmentButton();
+            }
+        }
+
+        // Status display
+        function showStatus(message, type) {
+            statusDisplay.style.display = 'block';
+            statusDisplay.className = `status-display ${type}`;
+
+            let icon = '';
+            switch (type) {
+                case 'loading':
+                    icon = '<div class="loading-spinner status-icon"></div>';
+                    break;
+                case 'success':
+                    icon = '<svg class="status-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z" /></svg>';
+                    break;
+                case 'error':
+                    icon = '<svg class="status-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg>';
+                    break;
+                default:
+                    icon = '<svg class="status-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
+            }
+
+            statusDisplay.innerHTML = `
+                ${icon}
+                <p style="font-weight: 500;">${message}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

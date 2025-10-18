@@ -1,0 +1,29 @@
+src.azureml\_pipeline.components.train package
+==============================================
+
+Submodules
+----------
+
+src.azureml\_pipeline.components.train.model\_definition module
+---------------------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.components.train.model_definition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.azureml\_pipeline.components.train.model\_training module
+-------------------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.components.train.model_training
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.components.train
+   :members:
+   :undoc-members:
+   :show-inheritance:

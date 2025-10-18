@@ -1,0 +1,24 @@
+name: Sync main to Unit_test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge main into Unit_test
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin
+          git checkout Unit_test || git checkout -b Unit_test
+          git merge origin/main --no-edit || echo "No changes to merge"
+          git push origin Unit_test

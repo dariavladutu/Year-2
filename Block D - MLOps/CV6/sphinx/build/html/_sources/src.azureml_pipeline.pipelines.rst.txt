@@ -1,0 +1,45 @@
+src.azureml\_pipeline.pipelines package
+=======================================
+
+Submodules
+----------
+
+src.azureml\_pipeline.pipelines.data\_pipeline module
+-----------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.pipelines.data_pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.azureml\_pipeline.pipelines.pipeline\_definition module
+-----------------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.pipelines.pipeline_definition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.azureml\_pipeline.pipelines.pipeline\_preprocess module
+-----------------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.pipelines.pipeline_preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.azureml\_pipeline.pipelines.pipeline\_preprocess\_utils module
+------------------------------------------------------------------
+
+.. automodule:: src.azureml_pipeline.pipelines.pipeline_preprocess_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.pipelines
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,9 @@
+name: unet-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - patchify==0.2.3

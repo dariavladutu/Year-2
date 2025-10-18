@@ -1,0 +1,10 @@
+src.azureml\_pipeline.environments package
+==========================================
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.environments
+   :members:
+   :undoc-members:
+   :show-inheritance:

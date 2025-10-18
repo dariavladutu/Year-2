@@ -1,0 +1,23 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "88"
+    ],
+    "editor.formatOnSave": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "${workspaceFolder}/.venv/Scripts/flake8.exe",
+    "python.sortImports.path": "${workspaceFolder}/.venv/Scripts/isort.exe",
+    "python.analysis.extraPaths": [
+        "./src", // adjust if needed
+        "./src/utils"
+    ],
+    "python.testing.pytestArgs": [
+        "CV6"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.autoImportCompletions": true
+}

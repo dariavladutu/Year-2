@@ -1,0 +1,18 @@
+name: evaluate-model
+display_name: Evaluate Segmentation Model
+type: command
+inputs:
+  model:
+    type: uri_file
+  data:
+    type: uri_folder
+  patch_size:
+    type: integer
+    default: 256
+code: .
+environment: azureml:iris:0.6.0
+command: >-
+  python evaluate.py
+  --model ${{inputs.model}}
+  --data ${{inputs.data}}
+  --patch_size ${{inputs.patch_size}}

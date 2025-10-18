@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+.env
+
+# Poetry virtual envs (managed outside project folder)
+.venv/
+
+# VSCode
+.vscode/  
+
+# Jupyter
+.ipynb_checkpoints/
+
+.coverage
+.pytest_cache/
+# Pytest
+.cache/ 
+__pycache__/
+htmlcov/
+*.coverage

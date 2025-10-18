@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 88
+# Needed for compatibility with black
+extend-ignore = E203, W503  
+exclude = .git,__pycache__,.venv,venv,.tox,.eggs,*.egg,build,dist
+show-source = true
+statistics = true
+# Ignore "do not use assert" warnings and commented out code, unused variables,
+# and other common issues that are not relevant for this project
+ignore = S101, E800, I100, E402, I201, W291, W293, D211, G001, G004, ANN101, S603, S607, S404, B008 , S110
+
+# Additional configuration options
+max-complexity = 25
+docstring-convention = google

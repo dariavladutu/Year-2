@@ -1,0 +1,47 @@
+src.API namespace
+=================
+
+.. py:module:: src.API
+
+Submodules
+----------
+
+src.API module
+--------------
+
+.. automodule:: src.API
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.API.cli module
+------------------
+
+.. automodule:: src.API.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.API.main 2 1 module
+-----------------------
+
+.. automodule:: src.API.main 2 1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.API.preprocessing module
+----------------------------
+
+.. automodule:: src.API.preprocessing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.API.segmentation module
+---------------------------
+
+.. automodule:: src.API.segmentation
+   :members:
+   :undoc-members:
+   :show-inheritance:

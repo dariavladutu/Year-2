@@ -1,0 +1,21 @@
+src.azureml\_pipeline.components package
+========================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.azureml_pipeline.components.evaluate
+   src.azureml_pipeline.components.io_utils
+   src.azureml_pipeline.components.preprocess
+   src.azureml_pipeline.components.train
+
+Module contents
+---------------
+
+.. automodule:: src.azureml_pipeline.components
+   :members:
+   :undoc-members:
+   :show-inheritance:

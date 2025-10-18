@@ -1,0 +1,21 @@
+#############  API & ASGI  #############
+fastapi                       # the web framework
+uvicorn[standard]             # ASGI server + uvloop, httptools, etc.
+python-multipart              # enables FastAPI file uploads
+aiofiles                      # lets FastAPI stream static files
+
+#############  Deep-Learning / CV  #############
+tensorflow==2.13.0
+opencv-python-headless        # OpenCV without GUI libs
+patchify                      # patchify / unpatchify for sliding-window
+pillow                        # Pillow image I/O (PNG/JPEG/TIFF)
+tifffile                      # TIFF support + metadata
+
+#############  Scientific stack  #############
+numpy
+pandas
+matplotlib
+seaborn
+
+#############  Testing / misc  #############
+pytest                        # optional—remove if you don’t need tests
