@@ -1,5 +1,5 @@
 ### Breda University of Applied Sciences  
-**👤 Daria-Elena Vlăduțu** | [LinkedIn](https://www.linkedin.com/in/daria-vladutu-576618263/) | 📧 daria.e.vladutu10@gmail.com  
+**Daria-Elena Vlăduțu** | [LinkedIn](https://www.linkedin.com/in/daria-vladutu-576618263/) | 📧 daria.e.vladutu10@gmail.com  
 
 ---
 
